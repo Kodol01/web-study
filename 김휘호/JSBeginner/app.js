@@ -3,15 +3,16 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 800;
 
-ctx.fillRect(200,200,50,200);
-ctx.fillRect(400,200,50,200);
-ctx.lineWidth = 2;
-ctx.strokeRect(300,300,50,100);
-ctx.fillRect(200,200,200,20);
-ctx.moveTo(200,200);
-ctx.lineTo(325,100);
-ctx.lineTo(450,200);
+ctx.fillRect(200,200,15,100);
+ctx.fillRect(350,200,15,100);
+ctx.fillRect(252.5,200,60,200);
+
+
+ctx.arc(282.5,150,50,0,2*Math.PI);
 ctx.fill();
-ctx.moveTo(250,400);
-ctx.lineTo(400,400);
-ctx.stroke();
+
+ctx.beginPath();
+ctx.fillStyle = "white";
+ctx.arc(265,125,10,0,1*Math.PI);
+ctx.arc(300,125,10,0,1*Math.PI);
+ctx.fill();
