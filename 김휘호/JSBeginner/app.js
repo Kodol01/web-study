@@ -1,3 +1,4 @@
+const colorOption = Array.from(document.getElementsByClassName("color-option"));
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const lineWidth = document.getElementById("line-width");
@@ -37,11 +38,19 @@ function onColorChange(event){
     ctx.fillStyle = event.target.value;
 }
 
+function onColorClick(event){
+    const colorValue = event.target.dataset.color
+    ctx.strokeStyle = colorValue;
+    ctx.fillStyle = colorValue;
+    color.value = colorValue;
+}
+
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", onMouseDown);
 canvas.addEventListener("mouseup", CancelPainting);
 canvas.addEventListener("mouseleave", CancelPainting);
-/*document.addEventListener("mouseleave", CancelPainting);
-document로 mouseleave 설정*/
+
 lineWidth.addEventListener("change", onLineWidthChange);
 color.addEventListener("change", onColorChange);
+
+colorOption.forEach(color => color.addEventListener("click", onColorClick));
