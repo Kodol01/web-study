@@ -41,7 +41,7 @@ function goResult(){
     setResult();
 }
 
-function addAnswer(answerText, qIdx){
+function addAnswer(answerText, qIdx, idx){
     var a = document.querySelector('.answerBox');
     var answer = document.createElement('button');
     answer.classList.add('answerList');
@@ -49,6 +49,7 @@ function addAnswer(answerText, qIdx){
     answer.classList.add('py-3');
     answer.classList.add('mx-auto');
     answer.classList.add('fadeIn');
+
     a.appendChild(answer);
     answer.innerHTML = answerText;
 
@@ -70,7 +71,7 @@ function addAnswer(answerText, qIdx){
             }
             goNext(++qIdx);
         },450)
-    }, false)
+    }, false);
 }
 
 function goNext(qIdx){
@@ -81,7 +82,7 @@ function goNext(qIdx){
     var q = document.querySelector('.qBox');
     q.innerHTML = qnaList[qIdx].q;
     for(let i in qnaList[qIdx].a){
-        addAnswer(qnaList[qIdx].a[i].answer, qIdx);
+        addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
     }
     var status = document.querySelector('.statusBar');
     status.style.width = (100/endPoint) * (qIdx + 1) + '%';
