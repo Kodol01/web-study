@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test</title>
+    <meta name="author" content="PandaCoding">
+    <meta name="keywords" content="십이간지 연애유형">
+    <meta name="description" content="십이간지 연애유형">
+
+    <!-- sns공유 -->
+    <meta property = "og:url" content="https://twelvelovetypebykodol.netlify.app" />
+    <meta property = "og:title" content="십이간지 연애유형" />
+    <meta property = "og:type" content="website" />
+    <meta property = "og:image" content="img/share.png" />
+    <meta property = "og:description" content="십이간지로 알아보는 연애유형" />
+
+    <!-- fabicon icon-icons.com -->
+    <link rel="shortcut icon" href="img/fabicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="img/fabicon.ico">
+
+
+    <title>십이간지 연애유형</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/dafault.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -12,6 +28,14 @@
     <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--카카오톡 api 받기-->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>    integrity="${INTEGRITY_VALUE}" crossorigin="anonymous"></script>
+    <script>
+        kakao.init('24312ed5cef7d11dc4d78d2898eS8d053');
+        kakao.isInitialized();
+    </script>
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
@@ -53,11 +77,13 @@
             <div class="resultDesc">
 
             </div>
-            <button type="button" class="kakao mt-3 px-3 py-2">공유하기</button>
+            <button type="button" class="kakao mt-3 px-3 py-2" onclick="js:kakaoShare()">공유하기</button>
         </section>
         </section>
         <script src="./js/data.js" charset="utf-8"></script>
         <script src="./js/start.js" charset="utf-8"></script>
+        <script src="./js/share.js" charset="utf-8"></script>
     </div>
 </body>
 </html>
+
