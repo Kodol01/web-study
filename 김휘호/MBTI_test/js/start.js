@@ -3,11 +3,11 @@ const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const endPoint = 12;
 const select = [0,0,0,0,0,0,0,0,0,0,0,0];
+result.style.display = "none";
 
 function calResult(){
+    console.log(select);
     var result = select.indexOf(Math.max(...select));
-
-    let resultword = resultArray[0].key;
     return result;
 }
 
