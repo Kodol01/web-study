@@ -21,6 +21,7 @@ function setResult(){
     var imgURL = 'img/image-' + point + '.png';
     resultImg.src = imgURL
     resultImg.alt = point;
+    resultImg.classList.add('img-fluid');
     imgDiv.appendChild(resultImg);
 
     const resultDesc = document.querySelector('.resultDesc');
